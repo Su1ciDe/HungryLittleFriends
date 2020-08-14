@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8159275659251850635}
   - component: {fileID: 8159275659251850644}
   - component: {fileID: 4679169131197428659}
+  - component: {fileID: 8159275659280621180}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -348,3 +349,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8159275659280621180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159275659251850647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0abe19895e4b174cac3ad4b42e3f4ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeoutTexture: {fileID: 2800000, guid: f18806a9afbee5f4a9995398132df66a, type: 3}
+  fadeSpeed: 0.8

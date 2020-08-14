@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -52,11 +53,27 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        StartCoroutine(_StartGame());
+    }
+
+    private IEnumerator _StartGame()
+    {
+        float fadeTime = gameObject.GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+
         SceneManager.LoadScene(1);
     }
 
     public void NextLevel(int curLevel)
     {
+        StartCoroutine(_NextLevel(curLevel));
+    }
+
+    private IEnumerator _NextLevel(int curLevel)
+    {
+        float fadeTime = gameObject.GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+
         SceneManager.LoadScene(curLevel + 1);
     }
 
@@ -64,6 +81,4 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-
 }

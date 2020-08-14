@@ -1,5 +1,4 @@
-﻿using UnityEditor.U2D.Path.GUIFramework;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FoodPickup : MonoBehaviour
 {

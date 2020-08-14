@@ -1,6 +1,5 @@
 ﻿using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -25,9 +24,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (!isColliding)
         {
-            //Move();
-
-            MoveTest();
+            Move();
         }
     }
 
@@ -51,27 +48,6 @@ public class PlayerControls : MonoBehaviour
         {
             anim.SetBool("walking", false);
             isColliding = false;
-        }
-    }
-
-    private void MoveTest()
-    {
-        if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
-        {
-            mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mPos.z = 0;
-        }
-
-        if (transform.position != mPos)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, mPos, moveSpeed * Time.deltaTime);
-
-            anim.SetBool("walking", true);
-            WalkAnimation(mPos);
-        }
-        else
-        {
-            anim.SetBool("walking", false);
         }
     }
 
